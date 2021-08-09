@@ -31,7 +31,7 @@ def generate():
         symbolschar = random.randint(0,len(symbols) -1)
 
         pw = pw + upper[uppercase] + lower[lowercase] + symbols[symbolschar]
-    print(pw)
+
     password.delete(0,END)
     password.insert(0,pw)
 
@@ -45,28 +45,28 @@ canvas.pack()
 
 #website
 website = Entry(width=50)
-label = Label(root, text='Website: ')
-canvas.create_window(250, 140, window=website)
-canvas.create_window(100, 140, window=label)
+label = Label(root, text='Website: ', padx= 10)
+canvas.create_window(270, 140, window=website)
+canvas.create_window(80, 140, window=label)
 
 #Username/email
-username = Entry(width=50)
-label_username = Label(root, text='Username/Email: ')
-canvas.create_window(250, 160, window=username)
-canvas.create_window(100, 160, window=label_username)
+username = Entry(width=50, )
+label_username = Label(root, text='Username ')
+canvas.create_window(270, 180, window=username)
+canvas.create_window(80, 180, window=label_username)
 
 #Password
 password = Entry(width=50)
 label_password= Label(root, text='Password: ')
-canvas.create_window(250, 180, window=password)
-canvas.create_window(100, 180, window=label_password)
+canvas.create_window(270, 220, window=password)
+canvas.create_window(80, 220, window=label_password)
 
 #Buttons
 pwbutton = Button(text="Generate Password", command=generate)
-canvas.create_window(460, 180, window = pwbutton)
+canvas.create_window(480, 180, window = pwbutton)
 
 add = Button(text="Add",width=50, command=save)
-canvas.create_window(250,200, window=add )
+canvas.create_window(270,250, window=add )
 
 
 
